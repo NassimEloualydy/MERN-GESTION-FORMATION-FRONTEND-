@@ -1,0 +1,13 @@
+const {hellow,loadeModules,getGroup,addVacation,getAll,deleteVacation,updateVacation,chart1,chart2}=require('../controllers/vacationController');
+const express=require('express');
+const Router=express.Router();
+Router.get('/hellow',hellow);
+Router.get('/loadeModules',loadeModules);
+Router.get('/getGroup/:module',getGroup);
+Router.post('/add',addVacation);
+Router.post('/getAll/:skip',getAll);
+Router.post('/delete/:id',deleteVacation);
+Router.post('/update/:id',updateVacation);
+Router.get('/chart1',chart1);
+Router.get('/chart2',chart2);
+module.exports=Router;

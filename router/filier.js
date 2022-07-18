@@ -1,0 +1,13 @@
+const express=require('express');
+const Router=express.Router();
+const {hellow,addFilier,getall,deleteFilier,updateFilier,search,nbrEtudient,distinctFilier,totaleFilier}=require("../controllers/filierController");
+Router.get('/hellow',hellow);
+Router.post('/add',addFilier);
+Router.post('/getall/:skip',getall);
+Router.delete('/deleteFilier/:id',deleteFilier);
+Router.post('/updateFilier/:id',updateFilier);
+Router.post('/search/:skip',search);
+Router.get('/nbrEtudient',nbrEtudient);
+Router.get('/distinctFilier',distinctFilier);
+Router.get('/totaleFilier',totaleFilier);
+module.exports=Router;
